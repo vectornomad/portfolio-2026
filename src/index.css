@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+:root {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #f4f4f5;
+  background: #080c0b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: clip;
+  background: #080c0b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: from-font;
+  text-underline-position: from-font;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  user-select: none;
+}
+
+:focus-visible {
+  outline: 2px solid #8b7cf6;
+  outline-offset: 3px;
+}
+
+.skills-marquee {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+
+.skills-track {
+  display: flex;
+  width: max-content;
+  animation: skills-scroll 42s linear infinite;
+  will-change: transform;
+}
+
+.skills-track-reverse {
+  animation-name: skills-scroll-reverse;
+}
+
+.skills-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.skills-item {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.4rem;
+  color: #a1a1aa;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  white-space: nowrap;
+}
+
+.skills-item svg {
+  color: #8b8b95;
+}
+
+.skills-marquee:hover .skills-track,
+.skills-marquee:focus .skills-track,
+.skills-marquee:focus-within .skills-track {
+  animation-play-state: paused;
+}
+
+@keyframes skills-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes skills-scroll-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .skills-track {
+    animation-duration: 34s;
+  }
+
+  .skills-group {
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .skills-item {
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .skills-marquee {
+    display: block;
+    min-height: 0;
+    overflow: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .skills-track {
+    display: block;
+    width: auto;
+    animation: none;
+  }
+
+  .skills-group {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    padding-right: 0;
+  }
+
+  .skills-group[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+::selection {
+  background: #8b5cf6;
+  color: #ffffff;
+}
