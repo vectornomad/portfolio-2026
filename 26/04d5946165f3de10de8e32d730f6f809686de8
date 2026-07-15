@@ -1,0 +1,97 @@
+.gitignore
+  s_b98506a4ba5646::t_ed234584b60ff5 1-25
+package-lock.json
+  s_b98506a4ba5646::t_2785dce5fc6a10 1-4527
+.openai/hosting.json
+  s_b98506a4ba5646::t_35e2c3abacd408 1-5
+README.md
+  s_b98506a4ba5646::t_3be9b975336e48 1-75
+build/clean-dist.mjs
+  s_b98506a4ba5646::t_aa0edcafe3579b 1-6
+build/prepare-sites-output.mjs
+  s_b98506a4ba5646::t_1e582618c7f1cd 1-8
+build/sites-vite-plugin.ts
+  s_b98506a4ba5646::t_f785a9a83c4d5b 1-38
+eslint.config.js
+  s_b98506a4ba5646::t_b610ed6cb5ea4b 1-22
+index.html
+  s_b98506a4ba5646::t_d2aac53b81bfee 1-31
+package.json
+  s_b98506a4ba5646::t_6267d40b48c73a 1-36
+public/favicon.svg
+  s_b98506a4ba5646::t_90c9ebb11be3a4 1-5
+public/icons.svg
+  s_b98506a4ba5646::t_c1ff0b0019396f 1-24
+src/App.tsx
+  s_b98506a4ba5646::t_6db42119384fec 1-23
+src/assets/react.svg
+  s_b98506a4ba5646::t_d14b4dfb58f59d 1
+src/assets/vite.svg
+  s_b98506a4ba5646::t_95e944ba9b0ca8 1
+src/components/About.tsx
+  s_b98506a4ba5646::t_5d2ad43a608f35 1-33
+src/components/Contact.tsx
+  s_b98506a4ba5646::t_cdf0e9184c8240 1-68
+src/components/Contributions.tsx
+  s_b98506a4ba5646::t_6ccf4dfc1b145b 1-55
+src/components/CurrentFocus.tsx
+  s_b98506a4ba5646::t_6a5b456777b2c3 1-59
+src/components/ExperienceItem.tsx
+  s_b98506a4ba5646::t_d9a979f67949a0 1-95
+src/components/ExperienceTimeline.tsx
+  s_b98506a4ba5646::t_fdb1dc50ffbec2 1-21
+src/components/Footer.tsx
+  s_b98506a4ba5646::t_8b007508bceb5a 1-11
+src/components/Hero.tsx
+  s_b98506a4ba5646::t_0291bd340ce0ae 1-113
+src/components/Navbar.tsx
+  s_b98506a4ba5646::t_f1db7940c8ddb9 1-32
+src/components/Notes.tsx
+  s_b98506a4ba5646::t_2d77661735d74f 1-58
+src/components/Now.tsx
+  s_b98506a4ba5646::t_6ee7e19b4a0396 1-35
+src/components/ProjectItem.tsx
+  s_b98506a4ba5646::t_ca546125151be4 1-152
+src/components/Projects.tsx
+  s_b98506a4ba5646::t_4b829246a6c386 1-35
+src/components/SectionLabel.tsx
+  s_b98506a4ba5646::t_80bdfa82d49b47 1-9
+src/components/Toolkit.tsx
+  s_b98506a4ba5646::t_e45a238f107632 1-101
+src/components/Uses.tsx
+  s_b98506a4ba5646::t_c31758b468d9c1 1-47
+src/data/experience.ts
+  s_b98506a4ba5646::t_1e1ae4f5b0db72 1-57
+src/data/projects.ts
+  s_b98506a4ba5646::t_2631da90e63416 1-99
+src/index.css
+  s_b98506a4ba5646::t_396a9cdd104ea1 1-195
+src/main.tsx
+  s_b98506a4ba5646::t_e7707d8b60082f 1-10
+tsconfig.app.json
+  s_b98506a4ba5646::t_d482174a3e7d4b 1-26
+tsconfig.json
+  s_b98506a4ba5646::t_49abbe5f6fb101 1-7
+tsconfig.node.json
+  s_b98506a4ba5646::t_908623908b7393 1-23
+vite.config.ts
+  s_b98506a4ba5646::t_91d023f234f249 1-22
+worker/index.ts
+  s_b98506a4ba5646::t_ced0754aebe455 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "2604d5946165f3de10de8e32d730f6f809686de8",
+  "prompts": {},
+  "sessions": {
+    "s_b98506a4ba5646": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f52a6-36fd-7300-8409-14017bd68daf",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Taahirah Denmark <126827805+Engineernoob@users.noreply.github.com>"
+    }
+  }
+}
