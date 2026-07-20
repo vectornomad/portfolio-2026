@@ -18,6 +18,55 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "patchpilot",
+    title: "PatchPilot",
+    category: "AI Debugging",
+    description:
+      "An AI support engineer that ingests logs, stack traces, and bug reports, ranks likely root causes, and generates patch-ready fixes.",
+    stack: ["TypeScript", "Next.js", "FastAPI", "PostgreSQL", "RAG", "Ollama"],
+    status: "Active",
+    github: "https://github.com/vectornomad/PatchPilot",
+    details: [
+      "RAG pipeline over codebases and error context",
+      "Root-cause ranking from logs and stack traces",
+      "Generates reviewable, patch-ready diffs",
+      "Runs against local models via Ollama",
+    ],
+  },
+  {
+    id: "noir",
+    title: "Noir",
+    category: "Developer Tools",
+    description:
+      "A terminal-based IDE built in Rust with language server support, tree-sitter syntax highlighting, and an integrated PTY.",
+    stack: ["Rust", "LSP", "tree-sitter", "PTY", "TUI"],
+    status: "Active",
+    github: "https://github.com/vectornomad/Noir",
+    details: [
+      "Native LSP integration for diagnostics and completion",
+      "Tree-sitter powered highlighting and structure",
+      "Embedded terminal via PTY",
+      "Built from scratch in Rust for speed",
+    ],
+  },
+  {
+    id: "interview-assistant",
+    title: "Invisible Interview Assistant",
+    category: "Desktop AI",
+    description:
+      "A screen-invisible macOS assistant that transcribes live audio with Whisper and generates real-time answers using local LLMs.",
+    stack: ["Go", "CGo", "Objective-C", "Whisper.cpp", "Ollama"],
+    status: "Completed",
+    details: [
+      "Undetectable overlay excluded from screen capture",
+      "Live transcription via Whisper.cpp",
+      "Local-first inference with Ollama, no cloud calls",
+      "Native macOS integration through CGo/Objective-C",
+    ],
+    href: "https://github.com/vectornomad/interview-assistant",
+    github: "https://github.com/vectornomad/interview-assistant",
+  },
+  {
     id: "recuris",
     title: "Recuris",
     category: "AI Agents",

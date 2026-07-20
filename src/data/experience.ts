@@ -13,6 +13,20 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
+    id: "mercor-contract",
+    organization: "Mercor",
+    role: "Software Engineer (Contract)",
+    period: "2026–Present",
+    status: "Active",
+    logo: "MC",
+    description:
+      "Contract software engineering focused on coding agent workflows, evaluating and improving AI-assisted development systems.",
+    contributions: [
+      "Selected for the Exceptional Software Engineers program (Coding Agent Experience).",
+      "Applying agent-systems experience from Recuris and PatchPilot to production AI tooling.",
+    ],
+  },
+  {
     id: "series-intern",
     organization: "Series",
     role: "Software Engineering Intern",
