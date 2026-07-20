@@ -16,7 +16,7 @@ const contactLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/taahirah-denmark-4b1441196",
     icon: Link2,
     external: true,
   },

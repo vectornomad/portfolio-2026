@@ -1,4 +1,4 @@
-export type ExperienceStatus = "Active" | "Studying" | "Building";
+export type ExperienceStatus = "Active" | "Studying" | "Building" | "Completed";
 
 export type Experience = {
   id: string;
@@ -15,12 +15,12 @@ export const experience: Experience[] = [
   {
     id: "series-intern",
     organization: "Series",
-    role: "Software Developer Intern",
-    period: "2025–Present",
-    status: "Active",
+    role: "Software Engineering Intern",
+    period: "2024–2025",
+    status: "Completed",
     logo: "SR",
     description:
-      "Contributing to full-stack product work across profile systems, Firebase data structures, and recommendation features.",
+      "Built distributed backend services and full-stack product features across profile systems, Firebase data structures, and NLP-driven recommendations.",
     contributions: [
       "Built and refined user profile workflows.",
       "Supported an NLP-powered recommendation feature.",

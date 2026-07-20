@@ -26,7 +26,7 @@ export const projects: Project[] = [
     stack: ["Python", "FastAPI", "Typer", "AI Agents", "Ollama"],
     status: "In development",
     href: "https://recuris.xyz",
-    github: "https://github.com/vectornomad",
+    github: "https://github.com/vectornomad/Recuris",
     details: [
       "Coordinates multiple specialized agents",
       "Uses task graphs for workflow execution",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
       "A local-first AI second brain for storing, embedding, searching, and retrieving personal knowledge.",
     stack: ["Python", "Ollama", "ChromaDB", "Embeddings", "RAG"],
     status: "Active",
-    github: "https://github.com/vectornomad",
+    github: "https://github.com/vectornomad/indexia",
     details: [
       "Runs locally",
       "Supports semantic search",
@@ -88,7 +88,8 @@ export const projects: Project[] = [
       "A retro desktop-style portfolio with draggable windows, apps, CRT effects, and a custom operating-system interface.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     status: "Active",
-    github: "https://github.com/vectornomad",
+    href: "https://taahirah-exe.vercel.app",
+    github: "https://github.com/vectornomad/taahirah.exe",
     details: [
       "Window manager",
       "Retro desktop UI",

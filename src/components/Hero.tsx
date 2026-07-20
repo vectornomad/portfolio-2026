@@ -58,8 +58,8 @@ export function Hero() {
             <p className="text-sm font-medium text-zinc-100">Recuris</p>
             <p className="mt-0.5 text-sm text-zinc-400">Autonomous AI software team</p>
           </div>
-          <span className="font-mono text-xs text-emerald-400">
-            Active
+          <span className="font-mono text-xs text-violet-300">
+            In development
           </span>
         </div>
 

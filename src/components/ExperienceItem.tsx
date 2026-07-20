@@ -6,12 +6,14 @@ const statusStyles: Record<Experience["status"], string> = {
   Active: "border-emerald-500/20 bg-emerald-500/10 text-emerald-400",
   Studying: "border-sky-500/20 bg-sky-500/10 text-sky-400",
   Building: "border-violet-500/20 bg-violet-500/10 text-violet-300",
+  Completed: "border-zinc-600/30 bg-zinc-500/10 text-zinc-400",
 };
 
 const dotStyles: Record<Experience["status"], string> = {
   Active: "bg-emerald-400",
   Studying: "bg-sky-400",
   Building: "bg-violet-400",
+  Completed: "bg-zinc-500",
 };
 
 export function ExperienceItem({ item }: { item: Experience }) {
