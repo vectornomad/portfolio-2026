@@ -1,0 +1,29 @@
+src/components/Contact.tsx
+  s_b98506a4ba5646::t_49261432f8e59a 19
+src/data/projects.ts
+  s_b98506a4ba5646::t_49261432f8e59a 29,45,91-92
+src/components/Hero.tsx
+  s_b98506a4ba5646::t_49261432f8e59a 61-62
+index.html
+  s_b98506a4ba5646::t_49261432f8e59a 17-19,26-39
+src/data/experience.ts
+  s_b98506a4ba5646::t_49261432f8e59a 1,18-20,23
+src/components/ExperienceItem.tsx
+  s_b98506a4ba5646::t_49261432f8e59a 9,16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.14",
+  "base_commit_sha": "6615f82c3ab353dd729de487c320d700327a83b5",
+  "prompts": {},
+  "sessions": {
+    "s_b98506a4ba5646": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f52a6-36fd-7300-8409-14017bd68daf",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Taahirah Denmark <126827805+Engineernoob@users.noreply.github.com>"
+    }
+  }
+}
