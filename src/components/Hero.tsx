@@ -4,6 +4,10 @@ import heroGraphic from "../assets/hero.png";
 export function Hero() {
   return (
     <section className="pb-7">
+      <nav aria-label="Site navigation" className="mb-8 flex items-center justify-between border-b border-zinc-800 pb-4 font-mono text-sm">
+        <span className="text-zinc-300">vectornomad/</span>
+        <a href="/blog/" className="rounded px-2 py-2 text-zinc-400 transition hover:text-violet-300">Blog <span aria-hidden="true">↗</span></a>
+      </nav>
       <div className="grid gap-5 sm:grid-cols-[112px_1fr] sm:items-center">
         <div className="relative h-24 w-24 overflow-hidden rounded border border-zinc-800 bg-[#0d1110] ring-1 ring-inset ring-white/10 sm:h-28 sm:w-28">
           <img
