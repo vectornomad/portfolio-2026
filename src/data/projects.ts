@@ -1,8 +1,5 @@
 export type ProjectStatus =
-  | "Active"
-  | "In development"
-  | "Prototype"
-  | "Completed";
+  "Active" | "In development" | "Prototype" | "Completed";
 
 export type Project = {
   id: string;
@@ -105,7 +102,14 @@ export const projects: Project[] = [
     category: "Desktop AI",
     description:
       "A voice-enabled desktop assistant with speech recognition, memory, reminders, and local-first workflows.",
-    stack: ["Electron", "React", "TypeScript", "Flask", "Whisper", "ElevenLabs"],
+    stack: [
+      "Electron",
+      "React",
+      "TypeScript",
+      "Flask",
+      "Whisper",
+      "ElevenLabs",
+    ],
     status: "Prototype",
     details: [
       "Voice input and speech output",
