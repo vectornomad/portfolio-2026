@@ -1,0 +1,18 @@
+src/App.tsx
+  h_582db1190e354d 11-14,20
+src/content/posts/returning-to-code.md
+  h_582db1190e354d 2,4-5,8-46,48,50,52,54
+src/data/projects.ts
+  h_582db1190e354d 2,105-112
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3afce97842f925bf8d7efbd52d37f60ea1b94f1d",
+  "prompts": {},
+  "humans": {
+    "h_582db1190e354d": {
+      "author": "Taahirah Denmark <126827805+Engineernoob@users.noreply.github.com>"
+    }
+  }
+}
