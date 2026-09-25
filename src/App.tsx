@@ -8,7 +8,7 @@ import { Footer } from "./components/Footer";
 import { Blog } from "./components/Blog";
 
 export default function App() {
-  if (window.location.pathname.replace(/\/$/, "") === "/blog") {
+  if (window.location.pathname === "/blog" || window.location.pathname.startsWith("/blog/")) {
     return <Blog />;
   }
 
