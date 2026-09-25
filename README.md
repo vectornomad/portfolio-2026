@@ -2,9 +2,24 @@
 
 ## Add a blog post
 
-Open `src/data/posts.ts` in a code editor. Copy the commented example into the `posts` array, remove the `//` marks, and replace the title, date, excerpt, and body with your writing. Give each post a unique lowercase `slug` with hyphens, such as `building-my-first-ai-agent`. Separate body paragraphs with a blank line; start a line with `## ` for a subheading.
+Create a Markdown file in `src/content/posts/`. Its filename becomes the URL slug, so `building-my-first-ai-agent.md` appears at `/blog/building-my-first-ai-agent/`.
 
-Posts appear newest first at `/blog/`. A post with slug `building-my-first-ai-agent` appears at `/blog/building-my-first-ai-agent/`. The public site changes only after you publish the edited code. You can send me the edited `posts.ts` or your draft and ask me to publish it.
+Start every file with this frontmatter:
+
+```md
+---
+title: Building my first AI agent
+date: 2026-09-25
+excerpt: One sentence about what readers will learn.
+published: false
+---
+
+Write the article in Markdown here.
+```
+
+Run the site locally to preview drafts. Drafts are marked in the blog index and on the article page. They are excluded from production routes.
+
+When an article is ready, change `published: false` to `published: true`. Posts appear newest first at `/blog/`. Publishing the public site still requires building and deploying the edited code.
 
 ## Run locally
 

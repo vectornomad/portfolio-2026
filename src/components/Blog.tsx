@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { ArrowLeft, ArrowUpRight, PenLine } from "lucide-react";
+import Markdown from "react-markdown";
 import { Footer } from "./Footer";
 import { posts, type Post } from "../data/posts";
-
-const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
 
 function Article({ post }: { post: Post }) {
   return (
@@ -11,17 +10,36 @@ function Article({ post }: { post: Post }) {
       <a href="/blog/" className="inline-flex min-h-11 items-center gap-2 font-mono text-sm text-zinc-400 hover:text-violet-300">
         <ArrowLeft size={16} aria-hidden="true" /> All posts
       </a>
-      <time dateTime={post.date} className="mt-8 block font-mono text-sm text-violet-300">{post.date}</time>
+      <div className="mt-8 flex flex-wrap items-center gap-3">
+        <time dateTime={post.date} className="font-mono text-sm text-violet-300">{post.date}</time>
+        {!post.published ? (
+          <span className="border border-amber-500/30 bg-amber-500/10 px-2 py-1 font-mono text-xs text-amber-300">
+            Draft preview
+          </span>
+        ) : null}
+      </div>
       <h1 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">{post.title}</h1>
       <p className="mt-5 max-w-[65ch] border-b border-zinc-800 pb-8 text-lg leading-8 text-zinc-400">{post.excerpt}</p>
-      <div className="max-w-[68ch] pt-4">
-        {post.body.trim().split(/\n\s*\n/).map((block, index) =>
-          block.startsWith("## ") ? (
-            <h2 key={index} className="mb-4 mt-9 text-xl font-semibold text-white">{block.slice(3)}</h2>
-          ) : (
-            <p key={index} className="my-5 whitespace-pre-line text-base leading-8 text-zinc-300">{block.trim()}</p>
-          ),
-        )}
+      <div className="max-w-[68ch] pt-4 text-base leading-8 text-zinc-300">
+        <Markdown
+          components={{
+            h2: ({ children }) => <h2 className="mb-4 mt-10 text-2xl font-semibold text-white">{children}</h2>,
+            h3: ({ children }) => <h3 className="mb-3 mt-8 text-xl font-semibold text-white">{children}</h3>,
+            p: ({ children }) => <p className="my-5">{children}</p>,
+            a: ({ children, href }) => (
+              <a className="text-violet-300 underline decoration-violet-400/40 underline-offset-4 hover:text-violet-200" href={href}>
+                {children}
+              </a>
+            ),
+            ul: ({ children }) => <ul className="my-5 list-disc space-y-2 pl-6 marker:text-violet-400">{children}</ul>,
+            ol: ({ children }) => <ol className="my-5 list-decimal space-y-2 pl-6 marker:text-violet-400">{children}</ol>,
+            blockquote: ({ children }) => <blockquote className="my-6 border-l-2 border-violet-400 pl-4 text-zinc-400">{children}</blockquote>,
+            code: ({ children }) => <code className="rounded-[3px] bg-zinc-900 px-1.5 py-1 font-mono text-sm text-zinc-200">{children}</code>,
+            pre: ({ children }) => <pre className="my-6 overflow-x-auto border border-zinc-800 bg-[#0b0f0e] p-4 text-sm leading-6">{children}</pre>,
+          }}
+        >
+          {post.body}
+        </Markdown>
       </div>
     </article>
   );
@@ -75,9 +93,12 @@ export function Blog() {
               <h2 id="posts-heading" className="font-mono text-xs uppercase tracking-widest text-zinc-400">All posts</h2>
               <span className="font-mono text-xs tabular-nums text-zinc-500">{String(posts.length).padStart(2, "0")} {posts.length === 1 ? "entry" : "entries"}</span>
             </div>
-            {sortedPosts.length ? <div className="mt-5 divide-y divide-zinc-800 border-y border-zinc-800">
-              {sortedPosts.map((item) => <article key={item.slug} className="py-6">
-                <time dateTime={item.date} className="font-mono text-sm text-zinc-500">{item.date}</time>
+            {posts.length ? <div className="mt-5 divide-y divide-zinc-800 border-y border-zinc-800">
+              {posts.map((item) => <article key={item.slug} className="py-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <time dateTime={item.date} className="font-mono text-sm text-zinc-500">{item.date}</time>
+                  {!item.published ? <span className="font-mono text-xs text-amber-300">Draft</span> : null}
+                </div>
                 <h3 className="mt-2 text-xl font-semibold text-white"><a href={`/blog/${item.slug}/`} className="hover:text-violet-300">{item.title}</a></h3>
                 <p className="mt-2 text-base leading-7 text-zinc-400">{item.excerpt}</p>
                 <a href={`/blog/${item.slug}/`} className="mt-3 inline-flex min-h-11 items-center gap-1 text-sm text-violet-300 hover:text-violet-200">Read post <ArrowUpRight size={16} aria-hidden="true" /></a>
