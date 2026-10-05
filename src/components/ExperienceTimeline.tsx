@@ -9,7 +9,7 @@ export function ExperienceTimeline() {
 
       <div className="relative mt-4 border border-dashed border-[#303535] bg-[#0b0f0e]">
         <div
-          className="absolute bottom-5 left-[29px] top-5 border-l border-dashed border-[#303535]"
+          className="absolute bottom-5 left-7.25 top-5 border-l border-dashed border-[#303535]"
           aria-hidden="true"
         />
         {experience.map((item) => (

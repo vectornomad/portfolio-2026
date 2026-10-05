@@ -16,8 +16,8 @@ export const experience: Experience[] = [
     id: "mercor-contract",
     organization: "Mercor",
     role: "Software Engineer (Contract)",
-    period: "2026–Present",
-    status: "Active",
+    period: "2026",
+    status: "Completed",
     logo: "MC",
     description:
       "Contract software engineering focused on coding agent workflows, evaluating and improving AI-assisted development systems.",

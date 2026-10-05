@@ -1,5 +1,5 @@
 const currentActivity = [
-  { label: "Building", value: "Recuris" },
+  { label: "Building", value: "Spite" },
   { label: "Learning", value: "Agent systems and distributed AI" },
   { label: "Improving", value: "Engineering fundamentals" },
   { label: "Looking for", value: "AI and software engineering roles" },
@@ -26,7 +26,7 @@ export function Now() {
         </dl>
 
         <p className="border-t border-dashed border-zinc-800 pt-2.5 text-right font-mono text-xs tabular-nums text-zinc-400">
-          Updated July 2026
+          Updated October 2026
         </p>
       </div>
     </section>

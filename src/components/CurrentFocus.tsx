@@ -1,21 +1,27 @@
 const focus = [
   {
     number: "01",
-    title: "Recuris",
+    title: "SPITE",
     description:
-      "Designing an autonomous AI software team with specialized agents and coordinated workflows.",
+      "Building a local-first sandbox runtime in Rust for AI agents — designed to use the compute you own and rent only what you need.",
   },
   {
     number: "02",
-    title: "Local AI",
+    title: "AI Systems",
     description:
-      "Exploring private, local-first AI tools that run closer to the user and their data.",
+      "Experimenting with agent runtimes, local models, orchestration, memory, and infrastructure for reliable AI-powered software.",
   },
   {
     number: "03",
-    title: "Engineering fundamentals",
+    title: "Systems Engineering",
     description:
-      "Strengthening systems knowledge, backend architecture, debugging, and technical communication.",
+      "Going deeper into Rust, runtimes, graphics, benchmarking, debugging, and the systems underneath modern developer tools.",
+  },
+  {
+    number: "04",
+    title: "Shipping",
+    description:
+      "Turning experiments into usable open-source projects with documentation, architecture decisions, benchmarks, and real-world testing.",
   },
 ];
 
@@ -33,7 +39,8 @@ export function CurrentFocus() {
           </h2>
 
           <p className="mt-5 text-sm leading-6 text-zinc-500">
-            A snapshot of what I’m actively building and learning in July 2026.
+            A snapshot of what I’m building, exploring, and learning in October
+            2026.
           </p>
         </div>
 
