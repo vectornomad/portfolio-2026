@@ -1,0 +1,20 @@
+src/components/CurrentFocus.tsx
+  h_582db1190e354d 4,6,10,12,16,18-24,42-43
+src/components/ExperienceTimeline.tsx
+  h_582db1190e354d 12
+src/components/Now.tsx
+  h_582db1190e354d 2,29
+src/data/experience.ts
+  h_582db1190e354d 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "58fa18a86f35f538f59fc9cc481ef04c6d62f4bc",
+  "prompts": {},
+  "humans": {
+    "h_582db1190e354d": {
+      "author": "Taahirah Denmark <126827805+Engineernoob@users.noreply.github.com>"
+    }
+  }
+}
