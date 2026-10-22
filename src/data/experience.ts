@@ -30,14 +30,16 @@ export const experience: Experience[] = [
     id: "series-intern",
     organization: "Series",
     role: "Software Engineering Intern",
-    period: "2024–2025",
+    period: "Jul 2024–Jul 2025",
     status: "Completed",
     logo: "SR",
     description:
       "Built distributed backend services and full-stack product features across profile systems, Firebase data structures, and NLP-driven recommendations.",
     contributions: [
-      "Built and refined user profile workflows.",
-      "Supported an NLP-powered recommendation feature.",
+      "Built Node.js and Python backend services handling 10,000+ daily API requests at sub-200ms latency.",
+      "Designed NLP-driven recommendations that increased engagement by 30% across 1,500+ active users.",
+      "Optimized PostgreSQL indexing and query plans, reducing read latency by 20%.",
+      "Integrated LLM tooling to automate internal classification and summarization workflows.",
     ],
   },
   {
