@@ -246,3 +246,55 @@ body { background:#090d14; }
 @media(max-width:780px) { .signal-container{padding:0 19px;} .signal-hero-layout{grid-template-columns:1fr;} .signal-field{min-height:235px;margin:0 0 24px;} .signal-project-list{grid-template-columns:1fr;} .signal-section-heading{align-items:start;flex-direction:column;gap:12px;} .signal-access-label{width:100%;} }
 @media(max-width:440px) { .signal-nav-link:first-child{display:none;} .signal-headline{font-size:43px;} .signal-meta{font-size:9px;} .signal-archive-heading{font-size:9px;}.signal-archive-heading span:last-child{max-width:140px;text-align:right;} }
 @media(prefers-reduced-motion:reduce){ .signal-primary-action:hover{transform:none;} }
+
+/* Living network: tiny traveling signals over fixed geometry, no JS animation loop. */
+.signal-route-pulse {
+  fill: none;
+  stroke-dasharray: 9 91;
+  stroke-dashoffset: 109;
+  opacity: 0;
+  filter: drop-shadow(0 0 3px currentColor);
+  animation: signal-transmit 8s linear infinite;
+}
+.signal-active-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: signal-heartbeat 5.4s ease-in-out infinite;
+}
+.signal-idle-node {
+  animation: signal-node-breathe 6.8s ease-in-out infinite;
+}
+.signal-grid { animation: signal-grid-drift 28s ease-in-out infinite alternate; }
+.signal-live-dot { animation: signal-status 3.7s ease-in-out infinite; }
+.signal-field-cross { animation: signal-cross-turn 30s linear infinite; transform-origin:center; }
+@keyframes signal-transmit {
+  0%, 10% { stroke-dashoffset: 109; opacity: 0; }
+  16% { opacity: .88; }
+  65% { opacity: .88; }
+  78%, 100% { stroke-dashoffset: -9; opacity: 0; }
+}
+@keyframes signal-heartbeat {
+  0%, 100% { opacity: .55; transform: scale(1); }
+  45% { opacity: 1; transform: scale(1.52); }
+  62% { opacity: .72; transform: scale(1.12); }
+}
+@keyframes signal-node-breathe {
+  0%, 100% { opacity: .42; }
+  50% { opacity: .87; }
+}
+@keyframes signal-grid-drift {
+  from { transform: translate3d(-5px,-4px,0); }
+  to { transform: translate3d(5px,4px,0); }
+}
+@keyframes signal-status {
+  0%, 100% { box-shadow: 0 0 0 3px #84e0ce15; }
+  50% { box-shadow: 0 0 0 7px #84e0ce05, 0 0 11px #84e0ce77; }
+}
+@keyframes signal-cross-turn {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signal-route-pulse, .signal-active-node, .signal-idle-node, .signal-grid,
+  .signal-live-dot, .signal-field-cross { animation: none !important; }
+  .signal-route-pulse { opacity: 0; }
+}
