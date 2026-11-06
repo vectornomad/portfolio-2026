@@ -1,11 +1,3 @@
 export function Footer() {
-  return (
-    <footer className="flex flex-col gap-2 border-t border-zinc-800 py-4 font-mono text-xs leading-5 text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
-      <div className="flex flex-wrap gap-x-3 gap-y-1">
-        <span>© 2026 Taahirah Denmark</span>
-        <span>@vectornomad</span>
-      </div>
-      <span>Built with React, Vite, TypeScript, and Tailwind CSS</span>
-    </footer>
-  );
+ return <footer className="lab-footer"><div><strong>VN<span>/</span></strong><span>Taahirah Denmark · @vectornomad</span></div><div><span>© 2026</span><span>Built with curiosity, React & Vite</span><a href="#top" onClick={(e)=>{e.preventDefault();window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});}}>Back to top ↑</a></div></footer>;
 }

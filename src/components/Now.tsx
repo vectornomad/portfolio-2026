@@ -1,35 +1,15 @@
-const currentActivity = [
-  { label: "Building", value: "Spite" },
-  { label: "Learning", value: "Agent systems and distributed AI" },
-  { label: "Improving", value: "Engineering fundamentals" },
-  { label: "Looking for", value: "AI and software engineering roles" },
+import { Activity, ArrowUpRight, CircleDot } from "lucide-react";
+const activity = [
+  {number:"01", label:"Building", value:"SPITE, RustCraft & NeuroDeck", note:"Systems and visual computing"},
+  {number:"02", label:"Exploring", value:"Local intelligence & agent systems", note:"Practical, local-first AI"},
+  {number:"03", label:"Studying", value:"Computer Science at Lewis University", note:"Operating systems, security & CS foundations"},
+  {number:"04", label:"Open to", value:"Remote AI and software engineering roles", note:"Backend, infrastructure & applied AI"},
 ];
-
 export function Now() {
-  return (
-    <section id="now" className="border-t border-zinc-800 py-7">
-      <SectionLabel>Now</SectionLabel>
-
-      <div className="mt-4 border border-[#303535] bg-[#0b0f0e] px-4 py-3">
-        <dl className="divide-y divide-dashed divide-zinc-800">
-          {currentActivity.map((item) => (
-            <div
-              key={item.label}
-              className="grid gap-1 py-2.5 sm:grid-cols-[96px_1fr] sm:gap-4"
-            >
-              <dt className="font-mono text-xs uppercase tracking-wide text-zinc-400">
-                {item.label}
-              </dt>
-              <dd className="text-sm leading-5 text-zinc-300">{item.value}</dd>
-            </div>
-          ))}
-        </dl>
-
-        <p className="border-t border-dashed border-zinc-800 pt-2.5 text-right font-mono text-xs tabular-nums text-zinc-400">
-          Updated October 2026
-        </p>
-      </div>
-    </section>
-  );
+ return <section id="now" className="lab-section" aria-labelledby="now-heading">
+   <div className="lab-section-head"><div><p className="signal-section-kicker">05 / LIVE SNAPSHOT</p><h2 id="now-heading">Currently <em>in motion.</em></h2></div><p>A small window into what I'm working on and thinking about right now.</p></div>
+   <div className="lab-now-shell"><div className="lab-now-top"><span><Activity size={16}/> CURRENT STATUS</span><span><CircleDot size={13}/> UPDATED NOV 2026</span></div>
+   <div className="lab-now-grid">{activity.map(item=><article className="lab-now-item" key={item.number}><span className="lab-now-id">{item.number} / {item.label}</span><h3>{item.value}</h3><p>{item.note}</p></article>)}</div></div>
+   <a className="lab-now-link" href="/blog/">Read the longer field notes <ArrowUpRight size={15}/></a>
+ </section>;
 }
-import { SectionLabel } from "./SectionLabel";
