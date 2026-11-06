@@ -1,4 +1,4 @@
-import { Cpu, Braces, Network, Database, Terminal, Layers3 } from "lucide-react";
+import { Cpu, Braces, Network, Layers3 } from "lucide-react";
 const groups = [
   { icon:Braces, title:"Languages & applications", tag:"BUILD / 01", items:["Python","TypeScript","JavaScript","Rust","Swift","Java","React","Vite","Next.js","Tailwind CSS"] },
   { icon:Network, title:"AI & intelligence", tag:"BUILD / 02", items:["Ollama","RAG","Embeddings","Local LLMs","Whisper","AI Agents","ChromaDB","OpenCV"] },
