@@ -8,20 +8,14 @@ import { Footer } from "./components/Footer";
 import { Blog } from "./components/Blog";
 
 export default function App() {
-  if (
-    window.location.pathname === "/blog" ||
-    window.location.pathname.startsWith("/blog/")
-  ) {
-    return <Blog />;
-  }
-
+  if (window.location.pathname === "/blog" || window.location.pathname.startsWith("/blog/")) return <Blog />;
   return (
-    <main className="min-h-screen bg-[#080c0b] text-zinc-100">
-      <div className="mx-auto max-w-760px px-4 py-10 sm:px-6 sm:py-14">
+    <main className="signal-shell min-h-screen">
+      <div className="signal-container">
         <Hero />
+        <Projects />
         <Toolkit />
         <ExperienceTimeline />
-        <Projects />
         <Now />
         <Contact />
         <Footer />
