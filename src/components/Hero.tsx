@@ -7,6 +7,8 @@ const cells = Array.from({ length: 21 }, (_, i) => ({
   size: i % 4 === 0 ? 5 : 3,
 }));
 
+const signalRoutes = [0, 3, 8, 12, 17];
+
 function SignalField() {
   return (
     <div className="signal-field" aria-hidden="true">
@@ -17,7 +19,24 @@ function SignalField() {
           const next = cells[(i+5)%cells.length];
           return <line key={"edge-"+i} x1={point.x*4.2} y1={point.y*2.7} x2={next.x*4.2} y2={next.y*2.7} stroke="url(#signal-stroke)" strokeWidth=".8"/>;
         })}
-        {cells.map((point,i)=><circle key={i} cx={point.x*4.2} cy={point.y*2.7} r={point.size/2} fill={i%5===0?"#7fe1d2":"#b6a8ff"} opacity={i%3===0?".92":".45"}/>)}
+        {signalRoutes.map((index, routeIndex) => {
+          const point = cells[index];
+          const next = cells[(index + 5) % cells.length];
+          return <line
+            key={"pulse-" + index}
+            className="signal-route-pulse"
+            style={{ animationDelay: `${routeIndex * -1.65}s`, animationDuration: `${7 + routeIndex * 0.8}s` }}
+            x1={point.x * 4.2}
+            y1={point.y * 2.7}
+            x2={next.x * 4.2}
+            y2={next.y * 2.7}
+            pathLength={100}
+            stroke={routeIndex % 2 ? "#7fe1d2" : "#b9aaff"}
+            strokeWidth="1.7"
+            strokeLinecap="round"
+          />;
+        })}
+        {cells.map((point,i)=><circle className={i % 4 === 0 ? "signal-active-node" : "signal-idle-node"} style={{ animationDelay: `${-i * 0.38}s` }} key={i} cx={point.x*4.2} cy={point.y*2.7} r={point.size/2} fill={i%5===0?"#7fe1d2":"#b6a8ff"} opacity={i%3===0?".92":".45"}/>)}
       </svg>
       <span className="signal-field-label">FIG 01 — LOCAL INTELLIGENCE / NETWORK STUDY</span>
       <span className="signal-field-cross">✳</span>
