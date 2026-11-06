@@ -1,0 +1,14 @@
+vercel.json
+  h_582db1190e354d 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "928e7eb749288248b3b6eeee7d416a549a41ab62",
+  "prompts": {},
+  "humans": {
+    "h_582db1190e354d": {
+      "author": "Taahirah Denmark <126827805+Engineernoob@users.noreply.github.com>"
+    }
+  }
+}
