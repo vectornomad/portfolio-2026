@@ -193,3 +193,56 @@ button {
   background: #8b5cf6;
   color: #ffffff;
 }
+
+
+/* SIGNAL LAB — visual layer, intentionally additive to preserve existing components */
+:root { --signal-ink:#090d14; --signal-violet:#b4a6ff; --signal-line:#283241; }
+body { background:#090d14; }
+.signal-shell { background: radial-gradient(ellipse 70% 26% at 94% 2%,#2d254633,transparent 75%),#090d14; color:#edf0fc; }
+.signal-container { max-width:1140px; padding:0 28px; margin:0 auto; }
+.signal-nav { display:flex; align-items:center; justify-content:space-between; min-height:78px; border-bottom:1px solid #273140; gap:16px; }
+.signal-wordmark { font:700 16px ui-monospace,SFMono-Regular,monospace; letter-spacing:-.045em; white-space:nowrap; color:#f1f0ff; }
+.signal-nav-link { display:inline-flex; gap:4px; align-items:center; font-size:12px; color:#a6b3c5; transition:color .2s; }
+.signal-nav-link:hover,.signal-access a:hover { color:#ded6ff; }
+.signal-command { display:inline-flex; align-items:center; gap:6px; border:1px solid #394255; border-radius:5px; padding:7px 10px; color:#adbbd1; font:12px ui-monospace,monospace; }
+.signal-command:hover { border-color:#b4a6ff; }
+.signal-hero-layout { display:grid; grid-template-columns: minmax(0,1.2fr) minmax(290px,.8fr); min-height:530px; gap:20px; }
+.signal-eyebrow,.signal-section-kicker { font:11px ui-monospace,SFMono-Regular,monospace; letter-spacing:.15em; color:#b9a9ff; }
+.signal-eyebrow { display:flex; align-items:center; gap:10px; }
+.signal-live-dot { width:7px;height:7px;border-radius:50%;background:#84e0ce;box-shadow:0 0 0 4px #84e0ce15; }
+.signal-headline { margin-top:30px; font-size:clamp(43px,5vw,74px); font-weight:620; letter-spacing:-.065em; line-height:1.08; }
+.signal-headline-accent { color:#b7a7ff; font-style:italic; font-family:Georgia,serif; font-weight:400; }
+.signal-headline-outline { color:#8ed8cf; font-style:italic; font-family:Georgia,serif; font-weight:400; }
+.signal-primary-action,.signal-secondary-action { display:inline-flex;align-items:center;justify-content:space-between;min-height:46px;gap:28px;padding:0 17px;font-size:13px;font-weight:600;transition:transform .2s,background .2s; }
+.signal-primary-action { background:#b9aaff;color:#151225; }
+.signal-primary-action:hover { background:#d1c7ff;transform:translateY(-2px); }
+.signal-secondary-action { border:1px solid #445064;color:#c7ccdb; }
+.signal-secondary-action:hover { background:#192131; }
+.signal-field { align-self:stretch; position:relative; margin:35px 0; border:1px solid #293648; min-height:410px; background:radial-gradient(ellipse at 50% 50%,#362e5540 0%,transparent 61%),#0d1420;overflow:hidden; }
+.signal-grid { position:absolute;inset:0;background-image:linear-gradient(#a2a4ff0b 1px,transparent 1px),linear-gradient(90deg,#a2a4ff0b 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(ellipse,#000 35%,transparent 80%); }
+.signal-network { position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 0 6px #aaa1ff55); }
+.signal-field-label { position:absolute;bottom:17px;left:18px;color:#8795aa;font:9px ui-monospace,monospace;letter-spacing:.09em; }
+.signal-field-cross { position:absolute;top:13px;right:17px;color:#8074b2;font-size:22px; }
+.signal-meta { display:flex;justify-content:space-between;gap:15px;align-items:center;padding:18px 0;border-top:1px solid #293343;border-bottom:1px solid #293343;font:10px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:#94a0b3; }
+.signal-access { display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:23px 0 35px; }
+.signal-access-label { font:10px ui-monospace,monospace;letter-spacing:.11em;color:#788598;margin-right:auto; }
+.signal-access a { display:inline-flex;align-items:center;gap:9px;color:#a9b5c8;font-size:12px;padding:8px 0; }
+.signal-projects { padding:58px 0 70px; border-top:1px solid #30394a; }
+.signal-section-heading { display:flex;align-items:end;justify-content:space-between;gap:30px;padding-bottom:30px; }
+.signal-section-heading h2 { font-size:clamp(32px,4vw,56px);letter-spacing:-.05em;line-height:1.14;margin-top:11px;font-weight:600; }
+.signal-section-heading h2 em { color:#b9aaff;font-family:Georgia,serif;font-weight:400; }
+.signal-section-heading > p { max-width:265px;font-size:13px;line-height:1.8;color:#96a4b8; }
+.signal-archive-heading { display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border:1px solid #344052;border-bottom:0;background:#111824;color:#92a2bc;font:10px ui-monospace,monospace;letter-spacing:.1em; }
+.signal-archive-heading span:first-child { display:inline-flex;gap:9px;align-items:center; }
+.signal-project-list { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;border:1px solid #344052;background:#344052; }
+.signal-project-list > article { background:#0f1621;transition:background .2s; }
+.signal-project-list > article:hover { background:#171f2d; }
+.signal-project-list > article:nth-child(3n+1) { background-image:linear-gradient(145deg,#8070c00a,transparent 58%); }
+.signal-archive-footer { display:flex;align-items:center;justify-content:flex-end;gap:11px;font:12px ui-monospace,monospace;padding:20px 0;color:#b6a9f8; }
+.signal-palette-backdrop { position:fixed;inset:0;z-index:100;background:#010409bd;display:flex;align-items:flex-start;justify-content:center;padding:16vh 18px 30px; }
+.signal-palette { width:min(100%,480px);background:#111925;border:1px solid #5c587c;box-shadow:0 25px 90px #0009; }
+.signal-palette-option { display:grid;grid-template-columns:30px 1fr 16px;align-items:center;gap:9px;padding:16px 20px;border-bottom:1px solid #283342;font-size:14px;color:#c8d2e2; }
+.signal-palette-option:hover { background:#22243b;color:white; }
+@media(max-width:780px) { .signal-container{padding:0 19px;} .signal-hero-layout{grid-template-columns:1fr;} .signal-field{min-height:235px;margin:0 0 24px;} .signal-project-list{grid-template-columns:1fr;} .signal-section-heading{align-items:start;flex-direction:column;gap:12px;} .signal-access-label{width:100%;} }
+@media(max-width:440px) { .signal-nav-link:first-child{display:none;} .signal-headline{font-size:43px;} .signal-meta{font-size:9px;} .signal-archive-heading{font-size:9px;}.signal-archive-heading span:last-child{max-width:140px;text-align:right;} }
+@media(prefers-reduced-motion:reduce){ .signal-primary-action:hover{transform:none;} }
