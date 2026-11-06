@@ -1,0 +1,14 @@
+README.md
+  h_582db1190e354d 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6c26141e27bd0df5f5ca2e946f74806c5a3f5527",
+  "prompts": {},
+  "humans": {
+    "h_582db1190e354d": {
+      "author": "Taahirah Denmark <126827805+Engineernoob@users.noreply.github.com>"
+    }
+  }
+}
