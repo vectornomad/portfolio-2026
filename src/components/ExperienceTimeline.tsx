@@ -1,21 +1,8 @@
 import { ExperienceItem } from "./ExperienceItem";
-import { SectionLabel } from "./SectionLabel";
 import { experience } from "../data/experience";
-
 export function ExperienceTimeline() {
-  return (
-    <section id="experience" className="border-t border-zinc-800 py-7">
-      <SectionLabel>Work Experience</SectionLabel>
-
-      <div className="relative mt-4 border border-dashed border-[#303535] bg-[#0b0f0e]">
-        <div
-          className="absolute bottom-5 left-7.25 top-5 border-l border-dashed border-[#303535]"
-          aria-hidden="true"
-        />
-        {experience.map((item) => (
-          <ExperienceItem item={item} key={item.id} />
-        ))}
-      </div>
-    </section>
-  );
+  return <section id="experience" className="lab-section" aria-labelledby="experience-heading">
+    <div className="lab-section-head"><div><p className="signal-section-kicker">04 / THE JOURNEY</p><h2 id="experience-heading">System <em>history.</em></h2></div><p>A record of the work, learning, and experiments shaping how I engineer software.</p></div>
+    <div className="lab-timeline" role="list">{experience.map(item=><div role="listitem" key={item.id}><ExperienceItem item={item}/></div>)}</div>
+  </section>;
 }
